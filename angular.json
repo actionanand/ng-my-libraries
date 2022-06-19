@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "ar-input": "apps/ar-input",
+    "ar-input-e2e": "apps/ar-input-e2e"
+  }
+}
