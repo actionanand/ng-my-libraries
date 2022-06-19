@@ -1,6 +1,6 @@
 # NxMonorepoPractice
 
-This project was generated using [Nx](https://nx.dev).
+This project was generated using [Nx](https://nx.dev) - [Angular 14.0.2](https://blog.angular.io/angular-v14-is-now-available-391a6db736af)
 
 <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
@@ -144,6 +144,7 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 
 ## Resources
 
+- [What’s New in Angular 14?](https://www.bacancytechnology.com/blog/whats-new-in-angular-14)
 - [Publishable libraries with Nx Monorepo - part 1](https://dev.to/agroupp/publishable-libraries-with-nx-monorepo-part-1-1ae)
 - [HOW TO DEPLOY NPM MODULES IN AN NX MONOREPO AND GITHUB ACTIONS?](https://yonatankra.com/how-to-deploy-npm-modules-in-an-nx-monorepo-and-github-actions/)
 
