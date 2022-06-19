@@ -1,6 +1,4 @@
-
-
-# NgMyLibraries
+# NxMonorepoPractice
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -8,13 +6,41 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Smart, Fast and Extensible Build System**
 
+## How I created this repo
+
+installing NX globally
+
+```bash
+npm install -g nx
+```
+
+creating nx workspace with angular
+
+```bash
+npx create-nx-workspace --preset=angular
+```
+
+running angular app in development
+
+```bash
+nx serve app-name
+```
+
+to see the files to be changed or created while creating component, use the flag `--dry-run`
+
+```bash
+nx g c home-page --project=project-name --dry-run
+```
+
+- [Getting started with NX and Angular](https://nx.dev/#getting-started)
+
 ## Quick Start & Documentation
 
 [Nx Documentation](https://nx.dev/angular)
 
 [10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
 
-[Interactive Tutorial](https://nx.dev/react-tutorial/01-create-application)
+[Interactive Tutorial](https://nx.dev/tutorial/01-create-application)
 
 ## Adding capabilities to your workspace
 
@@ -53,7 +79,40 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are shareable across libraries and applications. They can be imported from `@ng-my-libraries/mylib`.
+Libraries are shareable across libraries and applications. They can be imported from `@nx-monorepo-practice/mylib`.
+
+## Generating publishable library in nx and publishing
+
+```bash
+ng g @nrwl/angular:lib lib1 --publishable --importPath="@<organization_name>/lib1"
+```
+
+```bash
+ng g @nrwl/angular:lib lib1 --publishable --importPath="@<organization_name>/lib1" --tags="scope:public,type:util,target:all"
+```
+
+```bash
+ng g @nrwl/angular:lib lib2 --publishable --importPath="lib2"
+```
+
+- Building
+
+    ```bash
+    $ nx build lib1
+    $ nx build lib2
+    ```
+
+- You will find built and ready to publish versions in `dist/libs/lib1` and `dist/libs/lib2`. Now we ready to publish it to npm. You need to go to dist directory of your project
+
+    ```bash
+    cd /dist/libs/lib1
+    ```
+
+- Publishing
+
+    ```bash
+    npm publish --access public
+    ```
 
 ## Development server
 
@@ -83,14 +142,14 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
 
+## Resources
+
+- [Publishable libraries with Nx Monorepo - part 1](https://dev.to/agroupp/publishable-libraries-with-nx-monorepo-part-1-1ae)
+- [HOW TO DEPLOY NPM MODULES IN AN NX MONOREPO AND GITHUB ACTIONS?](https://yonatankra.com/how-to-deploy-npm-modules-in-an-nx-monorepo-and-github-actions/)
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 
