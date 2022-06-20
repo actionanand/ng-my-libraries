@@ -1,0 +1,38 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/fa-input/src",
+  "prefix": "ng-my-libraries",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/fa-input"],
+      "options": {
+        "project": "libs/fa-input/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/fa-input/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/fa-input/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/fa-input"],
+      "options": {
+        "jestConfig": "libs/fa-input/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/fa-input/**/*.ts", "libs/fa-input/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}
