@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { IconName } from '@fortawesome/fontawesome-svg-core';
+import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 
 import * as fa from '../model/fa-awesome-model';
 
@@ -11,6 +11,7 @@ import * as fa from '../model/fa-awesome-model';
 })
 export class FaInputComponent implements OnInit {
   @Input() icon: IconName | any  = fa.SOLID_PEN;
+  @Input() iconType: IconPrefix | any = fa.TYPE_SOLID_ICON;
 
   constructor() {}
 

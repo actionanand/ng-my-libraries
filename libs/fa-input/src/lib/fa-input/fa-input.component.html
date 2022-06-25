@@ -1,10 +1,4 @@
-<!-- <i class="icon fa" [ngClass]="classes"></i> -->
-<!-- <fa-icon [icon]="['fas', icon]"></fa-icon>
-<ng-content></ng-content> -->
-
-
-<div>
-  <fa-icon [icon]="['far', 'paper-plane']"></fa-icon>
-  <fa-icon [icon]="['fas', icon]"></fa-icon>
-  <fa-icon [icon]="['fab', 'angular']"></fa-icon>
+<div class="fa-input-wrap">
+  <fa-icon [icon]="[iconType, icon]" class="fa-input-wrap-icon"></fa-icon>
+  <ng-content></ng-content>
 </div>

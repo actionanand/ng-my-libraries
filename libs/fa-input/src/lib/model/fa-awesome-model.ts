@@ -1,3 +1,7 @@
+// Icon types
+export const TYPE_SOLID_ICON = 'fas';
+export const TYPE_REGULAR_ICON = 'far';
+export const TYPE_BRAND_ICON = 'fab';
 // Regular icons
 export const REG_SOLID_ADDRESS_BOOK = 'address-book';
 export const REG_SOLID_ADDRESS_CARD = 'address-card';
