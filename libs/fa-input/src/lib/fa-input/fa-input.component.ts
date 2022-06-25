@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'ng-ar-fa-input',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fa-input.component.scss'],
 })
 export class FaInputComponent implements OnInit {
+  @Input() icon: IconName = 'star';
+
   constructor() {}
 
   ngOnInit(): void {}
