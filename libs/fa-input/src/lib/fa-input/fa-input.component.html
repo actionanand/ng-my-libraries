@@ -1,6 +1,4 @@
-<p>fa-input works!</p>
-
-<div>
-  <fa-icon [icon]="['fas', 'star']"></fa-icon>
-  <fa-icon [icon]="['fab', 'angular']"></fa-icon>
+<div class="fa-input-wrap">
+  <fa-icon [icon]="[iconType, icon]" class="fa-input-wrap-icon"></fa-icon>
+  <ng-content></ng-content>
 </div>

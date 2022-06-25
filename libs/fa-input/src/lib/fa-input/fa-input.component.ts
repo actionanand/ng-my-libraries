@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
+
+import * as fa from '../model/fa-awesome-model';
 
 @Component({
   selector: 'ng-ar-fa-input',
@@ -6,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fa-input.component.scss'],
 })
 export class FaInputComponent implements OnInit {
+  @Input() icon: IconName | any  = fa.SOLID_PEN;
+  @Input() iconType: IconPrefix | any = fa.TYPE_SOLID_ICON;
+
   constructor() {}
 
   ngOnInit(): void {}
