@@ -1,19 +1,29 @@
 .container {
-  margin: 0 auto;
-  max-width: 300px;
-  padding-top:65px;
+  // margin: 0 auto;
+  // max-width: 300px;
+  padding-top: 4.1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & h1{
+    text-align: center;
+  }
 }
 
 .form-row {
   width:500px;
   margin-bottom: 10px;
-  // display: inline-block;
+  // border: 2px solid red;
 
   & label {
-    width: 100px;
+    width: 157px;
     text-align: right;
     padding-right: 3px;
-    // display: inline-block;
+    // border: 2px dotted green;
+    display: inline-block;
   }
 }
 
