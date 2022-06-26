@@ -24,11 +24,12 @@ import { faAmazonPay, faAngular, faAndroid, faApple, faTwitter, faFacebook, faWh
 // import { far } from '@fortawesome/free-regular-svg-icons';
 
 import { FaInputComponent } from './fa-input/fa-input.component';
+import { InputRefDirective } from './directives/input-ref.directive';
 
 @NgModule({
   imports: [CommonModule, FontAwesomeModule],
-  declarations: [FaInputComponent],
-  exports: [FaInputComponent]
+  declarations: [FaInputComponent, InputRefDirective],
+  exports: [FaInputComponent, InputRefDirective]
 })
 export class FaInputModule {
   constructor(faLib: FaIconLibrary) {

@@ -25,11 +25,10 @@
     // border: 2px dotted green;
     display: inline-block;
   }
-}
 
-
-input {
-  height: 25px;
+  & input {
+    height: 25px;
+  }
 }
 
 .normal-input {
