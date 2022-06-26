@@ -148,6 +148,8 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 - [Publishable libraries with Nx Monorepo - part 1](https://dev.to/agroupp/publishable-libraries-with-nx-monorepo-part-1-1ae)
 - [HOW TO DEPLOY NPM MODULES IN AN NX MONOREPO AND GITHUB ACTIONS?](https://yonatankra.com/how-to-deploy-npm-modules-in-an-nx-monorepo-and-github-actions/)
 - [How To Use Font Awesome icons in Angular Applications](https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/)
+- [TypeScript: Any | Unknown | Never](https://dev.to/ponikar/typescript-any-unknown-never-1idc)
+- [When to use `never` and `unknown` in TypeScript](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/)
 
 ## Further help
 
