@@ -9,40 +9,38 @@
 
 <div class="container">
   <h1>Font Awesome</h1>
+  <div class="form">
 
-<div class="form">
+    <div class="form-row">
+      <label>Normal Input:</label>
+      <input type="text" placeholder="not from lib">
+    </div>
 
-  <div class="form-row">
-    <label>Normal Input:</label>
-    <input type="text" placeholder="not from lib">
-  </div>
+    <div class="form-row">
+      <label>Email Input:</label>
+      <ng-ar-fa-input [icon]="iconEmail" [iconType]="typeReg">
+        <input class="normal-input" type="email" name="email" placeholder="E-mail">
+      </ng-ar-fa-input>
+    </div>
 
-  <div class="form-row">
-    <label>Email Input:</label>
-    <ng-ar-fa-input [icon]="iconEmail" [iconType]="typeReg">
-      <input class="normal-input" type="email" name="email" placeholder="E-mail">
-    </ng-ar-fa-input>
-  </div>
+    <div class="form-row ng-ar-fa-input-red-them">
+      <label>without @input:</label>
+      <ng-ar-fa-input>
+        <input type="text" placeholder="type your text">
+      </ng-ar-fa-input>
+    </div>
 
-  <div class="form-row">
-    <label>without @input:</label>
-    <ng-ar-fa-input>
-      <input type="text" placeholder="type your text">
-    </ng-ar-fa-input>
-  </div>
+    <div class="form-row">
+      <label>Normal Address Input:</label>
+      <ng-ar-fa-input [icon]="iconAddress" [iconType]="typeSolid">
+        <input type="text" placeholder="type your address">
+      </ng-ar-fa-input>    
+    </div>
 
-  <div class="form-row">
-    <label>Normal Address Input:</label>
-    <ng-ar-fa-input [icon]="iconAddress" [iconType]="typeSolid">
-      <input type="text" placeholder="type your address">
-    </ng-ar-fa-input>    
-  </div>
-
-  <div class="form-row">
-    <label>facebook Input:</label>
-    <ng-ar-fa-input [icon]="iconFb" [iconType]="typeBrand">
-      <input type="url" placeholder="type your fb link">
-    </ng-ar-fa-input>
-  </div>
-
+    <div class="form-row">
+      <label>facebook Input:</label>
+      <ng-ar-fa-input [icon]="iconFb" [iconType]="typeBrand">
+        <input type="url" placeholder="type your fb link">
+      </ng-ar-fa-input>
+    </div>
 </div>
