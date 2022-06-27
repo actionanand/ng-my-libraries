@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ng-my-libraries-tab',
+  selector: 'ar-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss'],
 })

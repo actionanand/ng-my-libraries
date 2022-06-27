@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input';
 
 @Component({
-  selector: 'ng-my-libraries-input',
+  selector: 'ar-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
 })
