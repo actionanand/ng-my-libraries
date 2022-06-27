@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input'
+import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input';
 
 @Component({
   selector: 'ng-my-libraries-root',
