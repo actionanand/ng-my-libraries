@@ -6,5 +6,6 @@ $border-color: green;
   &.input-focus {
     -webkit-box-shadow: 0px 0px 5px  $border-color;
     box-shadow: 0px 0px 5px  $border-color;
+    color: $border-color;
   }
 }
