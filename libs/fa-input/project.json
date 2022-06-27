@@ -1,7 +1,7 @@
 {
   "projectType": "library",
   "sourceRoot": "libs/fa-input/src",
-  "prefix": "ng-my-libraries",
+  "prefix": "ar-ng",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { InputComponent } from './pages/input/input.component';
 import { TabComponent } from './pages/tab/tab.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: AppComponent
+    component: InputComponent
   },
   {
     path: 'tab',
