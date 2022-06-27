@@ -1,64 +1,71 @@
-// Icon types
-export const TYPE_SOLID_ICON = 'fas';
-export const TYPE_REGULAR_ICON = 'far';
-export const TYPE_BRAND_ICON = 'fab';
-// Regular icons
-export const REG_SOLID_ADDRESS_BOOK = 'address-book';
-export const REG_SOLID_ADDRESS_CARD = 'address-card';
-export const REG_SOLID_ENVELOPE = 'envelope';
-export const REG_SOLID_ENVELOPE_OPEN = 'envelope-open';
-export const REG_SOLID_EYE = 'eye';
-export const REG_SOLID_EYE_SLASH = 'eye-slash';
-export const REG_SOLID_ID_CARD = 'id-card';
-export const REG_SOLID_ID_BADGE = 'id-badge';
-export const REG_SOLID_IMAGE = 'image';
-export const REG_SOLID_FILE = 'file';
-export const REG_SOLID_CREDIT_CARD = 'credit-card';
-export const REG_SOLID_EDIT = 'edit';
-export const REG_SOLID_USER = 'user';
-export const REG_SOLID_CALENDAR = 'calendar';
-export const REG_SOLID_PAPER_PLANE = 'paper-plane';
-// All the above regular icons plus following solid icons
-export const SOLID_LINK = 'link';
-export const SOLID_LOCK = 'lock';
-export const SOLID_LOCK_OPEN = 'lock-open';
-export const SOLID_BIRTHDAY_CAKE = 'birthday-cake';
-export const SOLID_BITCOIN_SIGN = 'bitcoin-sign';
-export const SOLID_RUPEE = 'rupee';
-export const SOLID_RUPEE_SIGN = 'rupee-sign';
-export const SOLID_DOLLAR = 'dollar';
-export const SOLID_DOLLAR_SIGN = 'dollar-sign';
-export const SOLID_EURO_SIGN = 'euro-sign';
-export const SOLID_EXCLAMATION = 'exclamation';
-export const SOLID_EXCLAMATION_CIRCLE = 'exclamation-circle';
-export const SOLID_EXCLAMATION_TRIANGLE = 'exclamation-triangle';
-export const SOLID_SEARCH = 'search';
-export const SOLID_PEN = 'pen';
-export const SOLID_PEN_NIB = 'pen-nib';
-export const SOLID_PHONE = 'phone';
-// Brand icons
-export const BRAND_AMAZON_PAY = 'amazon-pay';
-export const BRAND_ANGULAR = 'angular';
-export const BRAND_ANDROID = 'android';
-export const BRAND_GOOGLE_PLAY = 'google-play';
-export const BRAND_APPLE = 'apple';
-export const BRAND_APP_STORE = 'app-store';
-export const BRAND_TWITTER = 'twitter';
-export const BRAND_FACEBOOK = 'facebook';
-export const BRAND_WHATSAPP = 'whatsapp';
-export const BRAND_TELEGRAM = 'telegram';
-export const BRAND_GITHUB = 'github';
-export const BRAND_STACK_OVERFLOW = 'stack-overflow';
-export const BRAND_YOUTUBE = 'youtube';
-export const BRAND_G_PAY = 'google-pay';
-export const BRAND_PAYPAL = 'paypal';
-export const BRAND_CC_PAYPAL = 'cc-paypal';
-export const BRAND_STRIPE = 'stripe';
-export const BRAND_APPLE_PAY = 'apple-pay';
-export const BRAND_BITCOIN = 'bitcoin';
-export const BRAND_CHROME = 'chrome';
-export const BRAND_DISCORD = 'discord';
-export const BRAND_INSTA = 'instagram';
-export const BRAND_LINKED_IN = 'linkedin';
-export const BRAND_SKYPE = 'skype';
-export const BRAND_SLACK = 'slack';
+export const ICON_TYPE = {
+  SOLID: 'fas',
+  REGULAR: 'far',
+  BRAND: 'fab'
+};
+
+export const ICON_NAME = {
+  REG_SOLID: {
+    ADDRESS_BOOK: 'address-book',
+    ADDRESS_CARD: 'address-card',
+    ENVELOPE: 'envelope',
+    ENVELOPE_OPEN: 'envelope-open',
+    EYE: 'eye',
+    EYE_SLASH: 'eye-slash',
+    ID_CARD: 'id-card',
+    ID_BADGE: 'id-badge',
+    IMAGE: 'image',
+    FILE: 'file',
+    CREDIT_CARD: 'credit-card',
+    EDIT: 'edit',
+    USER: 'user',
+    CALENDAR: 'calendar',
+    PAPER_PLANE: 'paper-plane'
+  },
+  SOLID: {
+    LINK: 'link',
+    LOCK: 'lock',
+    LOCK_OPEN: 'lock-open',
+    BIRTHDAY_CAKE: 'birthday-cake',
+    BITCOIN_SIGN: 'bitcoin-sign',
+    RUPEE: 'rupee',
+    RUPEE_SIGN: 'rupee-sign',
+    DOLLAR: 'dollar',
+    DOLLAR_SIGN: 'dollar-sign',
+    EURO_SIGN: 'euro-sign',
+    EXCLAMATION: 'exclamation',
+    EXCLAMATION_CIRCLE: 'exclamation-circle',
+    EXCLAMATION_TRIANGLE: 'exclamation-triangle',
+    SEARCH: 'search',
+    PEN: 'pen',
+    PEN_NIB: 'pen-nib',
+    PHONE: 'phone'
+  },
+  BRAND: {
+    AMAZON_PAY: 'amazon-pay',
+    ANGULAR: 'angular',
+    ANDROID: 'android',
+    GOOGLE_PLAY: 'google-play',
+    APPLE: 'apple',
+    APP_STORE: 'app-store',
+    TWITTER: 'twitter',
+    FACEBOOK: 'facebook',
+    WHATSAPP: 'whatsapp',
+    TELEGRAM: 'telegram',
+    GITHUB: 'github',
+    STACK_OVERFLOW: 'stack-overflow',
+    YOUTUBE: 'youtube',
+    G_PAY: 'google-pay',
+    PAYPAL: 'paypal',
+    CC_PAYPAL: 'cc-paypal',
+    STRIPE: 'stripe',
+    APPLE_PAY: 'apple-pay',
+    BITCOIN: 'bitcoin',
+    CHROME: 'chrome',
+    DISCORD: 'discord',
+    INSTA: 'instagram',
+    LINKED_IN: 'linkedin',
+    SKYPE: 'skype',
+    SLACK: 'slack'
+  }
+};

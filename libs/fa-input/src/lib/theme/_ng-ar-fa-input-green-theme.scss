@@ -1,6 +1,6 @@
-$border-color: red;
+$border-color: green;
 
-:host-context(.ng-ar-fa-input-red-them) {
+:host-context(.fa-input-green-theme) {
   border-color: $border-color;
 
   &.input-focus {

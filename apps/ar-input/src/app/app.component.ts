@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { TYPE_BRAND_ICON, TYPE_REGULAR_ICON, TYPE_SOLID_ICON, REG_SOLID_ENVELOPE, REG_SOLID_ADDRESS_CARD, BRAND_FACEBOOK } from '@ng-ar/fa-input'
+import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input'
 
 @Component({
   selector: 'ng-my-libraries-root',
@@ -10,11 +10,11 @@ import { TYPE_BRAND_ICON, TYPE_REGULAR_ICON, TYPE_SOLID_ICON, REG_SOLID_ENVELOPE
 export class AppComponent {
   title = 'ar-input';
 
-  typeSolid = TYPE_SOLID_ICON;
-  typeReg = TYPE_REGULAR_ICON;
-  typeBrand = TYPE_BRAND_ICON;
+  typeSolid = ICON_TYPE.SOLID;
+  typeReg = ICON_TYPE.REGULAR;
+  typeBrand = ICON_TYPE.BRAND;
 
-  iconEmail = REG_SOLID_ENVELOPE;
-  iconAddress = REG_SOLID_ADDRESS_CARD;
-  iconFb = BRAND_FACEBOOK;
+  iconEmail = ICON_NAME.REG_SOLID.ENVELOPE;
+  iconAddress = ICON_NAME.REG_SOLID.ADDRESS_CARD;
+  iconFb = ICON_NAME.BRAND.FACEBOOK;
 }
