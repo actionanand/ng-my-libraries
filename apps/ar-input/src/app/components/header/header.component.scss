@@ -1,0 +1,45 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #cfd8dc;
+
+  & ul {
+    display: flex;
+    list-style: none;
+  }
+
+  & li {
+    padding-left: 1rem;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #0d47a1
+  }
+}
+
+// :host * {
+//   padding: 0;
+//   margin: 0;
+// }
+
+// :host body {
+//   font-family: Arial, Tahoma, Serif;
+//   color: #263238;
+// }
+
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+
+    & ul {
+      flex-direction: column;
+      padding-top: 0.5rem;
+    }
+
+    & li {
+      padding: 0.5rem 0;
+    }
+  }
+} 
