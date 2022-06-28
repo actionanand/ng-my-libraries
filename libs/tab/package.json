@@ -1,6 +1,10 @@
 {
   "name": "@ng-ar/tab",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "keywords": [
+    "Angular", "Angular14", "angular_tab"
+  ],
+  "author": "Anand Raja",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0"
