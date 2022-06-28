@@ -1,0 +1,38 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/tab/src",
+  "prefix": "ng-my-libraries",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/tab"],
+      "options": {
+        "project": "libs/tab/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/tab/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/tab/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/tab"],
+      "options": {
+        "jestConfig": "libs/tab/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/tab/**/*.ts", "libs/tab/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

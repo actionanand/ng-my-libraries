@@ -4,6 +4,7 @@
   "projects": {
     "ar-input": "apps/ar-input",
     "ar-input-e2e": "apps/ar-input-e2e",
-    "fa-input": "libs/fa-input"
+    "fa-input": "libs/fa-input",
+    "tab": "libs/tab"
   }
 }
