@@ -4,11 +4,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ar-tab',
-  templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.scss'],
+  selector: 'ng-ar-tab-panel',
+  templateUrl: './tab-panel.component.html',
+  styleUrls: ['./tab-panel.component.scss'],
 })
-export class TabComponent implements OnInit {
+export class TabPanelComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}

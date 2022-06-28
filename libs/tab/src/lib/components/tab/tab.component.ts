@@ -4,7 +4,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ar-tab',
+  selector: 'ng-ar-tab',
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss'],
 })

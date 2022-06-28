@@ -1,3 +1,6 @@
+/* eslint-disable @angular-eslint/component-selector */
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { AfterContentInit, Component, ContentChild, ElementRef, HostBinding, Input, OnInit } from '@angular/core';
 
 import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';

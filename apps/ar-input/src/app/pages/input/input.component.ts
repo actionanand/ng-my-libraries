@@ -1,3 +1,6 @@
+/* eslint-disable @angular-eslint/component-selector */
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { Component, OnInit } from '@angular/core';
 
 import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input';
