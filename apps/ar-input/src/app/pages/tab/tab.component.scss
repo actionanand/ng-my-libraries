@@ -31,5 +31,24 @@
 }
 
 .btn-test{
-  color: red;
+  display: inline-block;
+  color: white;
+  background-color: aqua;
+  padding: 2px 20px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 1px solid rgb(17, 239, 239);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: white;
+    color: rgb(17, 239, 239);
+    border: 1px solid rgb(17, 239, 239);
+  }
+}
+
+.btn-selected {
+  background-color: green;
+  border: 1px solid rgb(6, 95, 6);
 }

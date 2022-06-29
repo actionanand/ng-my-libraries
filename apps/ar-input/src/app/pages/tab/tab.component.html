@@ -5,8 +5,14 @@
 <div class="container">
 
   <ng-template #headerButtons>
-    <button (click)="tabPanel.onSelectTab(loginTab)" class="btn-test"> Login </button>
-    <button (click)="tabPanel.onSelectTab(signupTab)"> Sign Up</button>
+    <button (click)="tabPanel.onSelectTab(loginTab)" class="btn-test" 
+      [ngClass]="{ 'btn-selected': tabPanel.tabSelected?.title === 'Login' }">
+      Login
+    </button>
+    <button (click)="tabPanel.onSelectTab(signupTab)" class="btn-test" 
+      [ngClass]="{ 'btn-selected': tabPanel.tabSelected?.title === 'Sign Up' }">
+      Sign-Up
+    </button>
   </ng-template>
 
   <ng-ar-tab-panel [headerTemplate]="headerButtons" #tabPanel>

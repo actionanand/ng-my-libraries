@@ -38,4 +38,15 @@ export class TabPanelComponent implements OnInit, AfterContentInit {
     }
   }
 
+  // this is for the external html template (to know the selected one)
+  get tabSelected() {
+    let selectedTab = this.tabs.find(tab => tab.selected);
+
+    if(!selectedTab && this.tabs.first) {
+      this.tabs.first.selected = true;
+      selectedTab = this.tabs.first; 
+    }
+    return selectedTab;
+  }
+
 }
