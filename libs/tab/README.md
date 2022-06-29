@@ -8,6 +8,11 @@ This small module contains only the HTML and CSS necessary to implement this ver
 
 The default theme of the input is designed to look just like a plain HTML input, including the focus blue border (tab and shift-tab are supported) -->
 
+# Demo
+
+Here is what the inputs with the icons look like on screen:
+![Demo of ng-ar-tab]()
+
 # Installation
 
 This is how to install the components:
