@@ -10,8 +10,9 @@ The default theme of the input is designed to look just like a plain HTML input,
 
 # Demo
 
-Here is what the inputs with the icons look like on screen:
-![Demo of ng-ar-tab]()
+Here is how the tabs look like on the screen:
+
+![Demo of ng-ar-tab](https://raw.githubusercontent.com/actionanand/ng-my-libraries/main/libs/tab/src/assets/images/tab.PNG)
 
 # Installation
 

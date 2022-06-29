@@ -8,8 +8,9 @@ The default theme of the input is designed to look just like a plain HTML input,
 
 # Demo
 
-Here is what the inputs with the icons look like on screen:
-![Demo of ng-ar-fa-input]()
+Here is how the inputs with the icons look like on the screen:
+
+![Demo of ng-ar-fa-input](https://raw.githubusercontent.com/actionanand/ng-my-libraries/main/libs/fa-input/src/assets/images/fa-input.PNG)
 
 # Installation
 
