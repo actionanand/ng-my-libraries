@@ -1,7 +1,7 @@
 /* eslint-disable @angular-eslint/component-selector */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
-import { AfterContentInit, Component, ContentChildren, OnInit, QueryList } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList, TemplateRef } from '@angular/core';
 
 import { TabComponent } from '../tab/tab.component';
 
@@ -14,13 +14,15 @@ export class TabPanelComponent implements OnInit, AfterContentInit {
 
   @ContentChildren(TabComponent) tabs!: QueryList<TabComponent>;
 
+  @Input() headerTemplate!: TemplateRef<unknown>;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   ngAfterContentInit(): void {
     const selectedTab = this.tabs.find(tab => tab.selected);
-    if(!selectedTab) {
+    if(!selectedTab && this.tabs.first) {
       this.tabs.first.selected = true;
     }
   }
@@ -28,6 +30,12 @@ export class TabPanelComponent implements OnInit, AfterContentInit {
   onSelectTab(tab:TabComponent) {
     this.tabs.forEach(tab => tab.selected = false);
     tab.selected = true;
+  }
+
+  get tabsContext() {
+    return {
+      tabs: this.tabs
+    }
   }
 
 }

@@ -3,9 +3,14 @@
 </h2>
 
 <div class="container">
-  <ng-ar-tab-panel>
 
-    <ng-ar-tab title="login">
+  <ng-template #headerButtons>
+    <button (click)="tabPanel.onSelectTab(loginTab)"> Login </button>
+    <button (click)="tabPanel.onSelectTab(signupTab)"> Sign Up</button>
+  </ng-template>
+
+  <ng-ar-tab-panel [headerTemplate]="headerButtons" #tabPanel>
+    <ng-ar-tab title="login" #loginTab>
       <form>
         <div class="form-field">
             <label>Email:</label><input class="login-email">
@@ -16,7 +21,7 @@
       </form>
     </ng-ar-tab>
 
-    <ng-ar-tab title="sign up">
+    <ng-ar-tab title="sign up" #signupTab>
       <form>
         <div class="form-field">
             <label>Email:</label><input>
@@ -41,6 +46,5 @@
         </div>
       </form>
     </ng-ar-tab>
-
   </ng-ar-tab-panel>
 </div>
