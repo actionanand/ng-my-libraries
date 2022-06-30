@@ -1,8 +1,8 @@
 <body>
   <div class="container">
     <h1>Modal Examples</h1>
-    
-    <ng-ar-modal>
+
+    <ng-template #authModalBody>
       <ng-ar-tab-panel>
         <ng-ar-tab title="Login">
           <form>
@@ -39,6 +39,9 @@
           </form>
         </ng-ar-tab>
       </ng-ar-tab-panel>
+    </ng-template>
+    
+    <ng-ar-modal [body]="authModalBody">
     </ng-ar-modal>
 
     <div class="modal-buttons">
