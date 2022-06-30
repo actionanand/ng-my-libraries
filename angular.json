@@ -5,6 +5,7 @@
     "ar-input": "apps/ar-input",
     "ar-input-e2e": "apps/ar-input-e2e",
     "fa-input": "libs/fa-input",
+    "modal": "libs/modal",
     "tab": "libs/tab"
   }
 }
