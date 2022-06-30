@@ -20,7 +20,13 @@ import { ModalComponent } from './pages/modal/modal.component';
     HeaderComponent,
     ModalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FaInputModule, TabModule, ModalModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FaInputModule,
+    TabModule,
+    ModalModule.forRoot()
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,13 +1,17 @@
 /* eslint-disable @angular-eslint/directive-selector */
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
+
+import { NgArModalService } from '../services/modal.service';
 
 @Directive({
   selector: '[ngArModalOpenOnClick]'
 })
-export class ModalOpenOnClickDirective {
+export class ModalOpenOnClickDirective implements OnInit {
 
-  constructor(private templateRef: TemplateRef<unknown>, private viewContainer: ViewContainerRef) { }
+  constructor(private templateRef: TemplateRef<unknown>,
+    private viewContainer: ViewContainerRef,
+    private modalServ: NgArModalService) { }
 
   @Input()
     set ngArModalOpenOnClick(els: any){
@@ -25,7 +29,10 @@ export class ModalOpenOnClickDirective {
           this.viewContainer.createEmbeddedView(this.templateRef);
         });
       });
-
     }
+
+  ngOnInit(): void {
+    this.modalServ.close$.subscribe(() => this.viewContainer.clear());
+  }
 
 }

@@ -28,7 +28,7 @@ import { ModalModule } from '@ng-ar/modal';
   imports: [
     BrowserModule,
     ....,
-    ModalModule
+    ModalModule.forRoot()
 ],
 })
 export class AppModule { }
