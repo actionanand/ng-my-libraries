@@ -40,9 +40,12 @@
         </ng-ar-tab>
       </ng-ar-tab-panel>
     </ng-template>
+
+    <ng-template [ngArModalOpenOnClick]="loginButton">
+      <ng-ar-modal [body]="authModalBody">
+      </ng-ar-modal>
+    </ng-template>
     
-    <ng-ar-modal [body]="authModalBody">
-    </ng-ar-modal>
 
     <div class="modal-buttons">
       <button #loginButton>Login</button>
