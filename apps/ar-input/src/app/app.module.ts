@@ -9,9 +9,16 @@ import { AppComponent } from './app.component';
 import { TabComponent } from './pages/tab/tab.component';
 import { InputComponent } from './pages/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ModalComponent } from './pages/modal/modal.component';
 
 @NgModule({
-  declarations: [AppComponent, TabComponent, InputComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    TabComponent,
+    InputComponent,
+    HeaderComponent,
+    ModalComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FaInputModule, TabModule],
   providers: [],
   bootstrap: [AppComponent],
