@@ -1,21 +1,46 @@
-<header class="l-header">
-  <ul class="top-menu disable-link-styles">
-    <li class="logo-small-container">
-      <a class="v-center-block-parent">
-        <img class="v-center-block logo-small"
-            src="sample_image"
-            data-pin-nopin="true">
-      </a>
-    </li>
-    <li>
-      <a>Modal</a>
-    </li>
-  </ul>
-</header>
-
 <body>
   <div class="container">
     <h1>Modal Examples</h1>
+    
+    <ng-ar-modal>
+      <ng-ar-tab-panel>
+        <ng-ar-tab title="Login">
+          <form>
+            <div class="form-field">
+              <ng-ar-fa-input [icon]="iconEmail" [iconType]="typeReg">
+                <input class="normal-input" type="email" name="email" placeholder="Please type yourE-mail">
+              </ng-ar-fa-input>
+            </div>
+            <div class="form-field">
+              <ng-ar-fa-input [icon]="iconPassword" [iconType]="typeSolid">
+                <input class="normal-input" type="password" name="password" placeholder="Please enter your password">
+              </ng-ar-fa-input>
+            </div>
+          </form>
+        </ng-ar-tab>
+  
+        <ng-ar-tab title="Sign Up">
+          <form>
+            <div class="form-field">
+              <ng-ar-fa-input [icon]="iconEmail" [iconType]="typeReg">
+                <input class="normal-input" type="email" name="email" placeholder="Please type yourE-mail">
+              </ng-ar-fa-input>
+            </div>
+            <div class="form-field">
+              <ng-ar-fa-input [icon]="iconPassword" [iconType]="typeSolid">
+                <input class="normal-input" type="password" name="password" placeholder="Please enter your password">
+              </ng-ar-fa-input>
+            </div>
+            <div class="form-field">
+              <ng-ar-fa-input [icon]="iconPassword" [iconType]="typeSolid">
+                <input class="normal-input" type="password" name="confirm-password" placeholder="Please confirm your password">
+              </ng-ar-fa-input>
+            </div>
+          </form>
+        </ng-ar-tab>
+      </ng-ar-tab-panel>
+    </ng-ar-modal>
+
     <div class="modal-buttons">
       <button #loginButton>Login</button>
       <button #signUpButton>Sign Up</button>

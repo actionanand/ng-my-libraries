@@ -7,6 +7,6 @@ import { ModalOpenOnClickDirective } from './directives/modal-open-on-click.dire
 @NgModule({
   imports: [CommonModule],
   declarations: [ModalComponent, ModalOpenOnClickDirective],
-  exports: [ModalOpenOnClickDirective]
+  exports: [ModalComponent, ModalOpenOnClickDirective]
 })
 export class ModalModule {}

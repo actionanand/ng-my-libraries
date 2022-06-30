@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
+import { ModalModule } from '@ng-ar/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,7 @@ import { ModalComponent } from './pages/modal/modal.component';
     HeaderComponent,
     ModalComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FaInputModule, TabModule],
+  imports: [BrowserModule, AppRoutingModule, FaInputModule, TabModule, ModalModule],
   providers: [],
   bootstrap: [AppComponent],
 })
