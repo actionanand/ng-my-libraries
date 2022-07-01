@@ -1,6 +1,10 @@
 {
   "name": "@ng-ar/modal",
-  "version": "0.0.1",
+  "version": "14.0.2",
+  "keywords": [
+    "Angular", "Angular14", "angular_modal"
+  ],
+  "author": "Anand Raja",
   "peerDependencies": {
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0"

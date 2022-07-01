@@ -6,6 +6,12 @@ import { EventManager } from '@angular/platform-browser';
 
 import { NgArModalService } from '../services/modal.service';
 
+enum FA_CLOSE_ICONS {
+  cross = 'times',
+  circle = 'times-circle',
+  square = 'times-square'
+};
+
 @Component({
   selector: 'ng-ar-modal',
   templateUrl: './modal.component.html',
@@ -14,8 +20,13 @@ import { NgArModalService } from '../services/modal.service';
 export class ModalComponent implements OnInit {
 
   @Input() body!: TemplateRef<unknown>;
+  @Input() context: any;
   @Input() hideOnEsc: boolean = true;
   @Input() hideOnClickOutside: boolean = true;
+  @Input() showCloseIcon: boolean = true;
+  @Input() closeIconSymbol: string = 'circle';
+
+  readonly closeIconKeys: (keyof typeof FA_CLOSE_ICONS)[] = Object.keys(FA_CLOSE_ICONS) as (keyof typeof FA_CLOSE_ICONS)[];
 
   constructor(private modalServ: NgArModalService, private eventManager: EventManager) {}
 
@@ -24,7 +35,9 @@ export class ModalComponent implements OnInit {
     this.hideOnEsc && this.modalServ.close();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.closeIconKeys)
+  }
 
   onClickOutsideModal() {
     this.hideOnClickOutside && this.modalServ.close();
@@ -33,5 +46,28 @@ export class ModalComponent implements OnInit {
   onCancelClick(event: MouseEvent) {
     event.preventDefault();
     event.stopPropagation();
+  }
+
+  onCloseModal() {
+    this.modalServ.close();
+  }
+
+  get getCloseIconSymbol(): any {
+    let iconKeyIndx: number;
+    iconKeyIndx = Object.keys(FA_CLOSE_ICONS).indexOf(this.closeIconSymbol as unknown as FA_CLOSE_ICONS);
+
+    if (iconKeyIndx === -1) {
+      iconKeyIndx = 1;
+    }
+
+    // for(const key in this.closeIconKeys) {
+    //   if (this.closeIconSymbol == key) {
+    //     iconKeyIndx = Object.keys(FA_CLOSE_ICONS).indexOf(this.closeIconSymbol as unknown as FA_CLOSE_ICONS);
+    //   } else {
+    //     iconKeyIndx = 1
+    //   }
+    // }
+
+    return Object.values(FA_CLOSE_ICONS)[iconKeyIndx]
   }
 }

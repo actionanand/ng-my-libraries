@@ -13,6 +13,8 @@ import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input';
 export class ModalComponent implements OnInit {
   constructor() {}
 
+  loginActive = true;
+
   typeSolid = ICON_TYPE.SOLID;
   typeReg = ICON_TYPE.REGULAR;
   typeBrand = ICON_TYPE.BRAND;
@@ -20,6 +22,9 @@ export class ModalComponent implements OnInit {
   iconEmail = ICON_NAME.REG_SOLID.ENVELOPE;
   iconPassword = ICON_NAME.SOLID.LOCK;
 
-
   ngOnInit(): void {}
+
+  setLoginActive(loginState: boolean) {
+    this.loginActive = loginState;
+  }
 }
