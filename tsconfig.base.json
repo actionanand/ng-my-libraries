@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@ng-ar/fa-input": ["libs/fa-input/src/index.ts"],
+      "@ng-ar/modal": ["libs/modal/src/index.ts"],
       "@ng-ar/tab": ["libs/tab/src/index.ts"]
     }
   },
