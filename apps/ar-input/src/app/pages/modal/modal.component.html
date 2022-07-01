@@ -46,8 +46,9 @@
       </ng-ar-modal>
     </ng-template> -->
 
-    <ng-ar-modal [hideOnEsc]="true" [body]="authModalBody" [hideOnClickOutside]="true"
+    <ng-ar-modal [hideOnEsc]="true" [body]="authModalBody" [hideOnClickOutside]="true" [showCloseIcon]="true"
       *ngArModalOpenOnClick="[loginButton, signUpButton]">
+      <!-- <fa-icon class="modal-close-i" [icon]="['fas', 'times-square']"></fa-icon> -->
     </ng-ar-modal>
     
 

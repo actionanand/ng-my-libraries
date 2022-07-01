@@ -16,6 +16,7 @@ export class ModalComponent implements OnInit {
   @Input() body!: TemplateRef<unknown>;
   @Input() hideOnEsc: boolean = true;
   @Input() hideOnClickOutside: boolean = true;
+  @Input() showCloseIcon: boolean = true;
 
   constructor(private modalServ: NgArModalService, private eventManager: EventManager) {}
 

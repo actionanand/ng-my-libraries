@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faTimes, faTimesCircle, faTimesSquare } from '@fortawesome/free-solid-svg-icons';
 import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
 import { ModalModule } from '@ng-ar/modal';
@@ -23,6 +25,7 @@ import { ModalComponent } from './pages/modal/modal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
     FaInputModule,
     TabModule,
     ModalModule.forRoot()
@@ -30,4 +33,8 @@ import { ModalComponent } from './pages/modal/modal.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(faLib: FaIconLibrary) {
+    faLib.addIcons(faTimes, faTimesCircle, faTimesSquare);
+  }
+}

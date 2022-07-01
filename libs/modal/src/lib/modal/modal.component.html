@@ -1,11 +1,21 @@
 <div class="modal-overlay" (click)="onClickOutsideModal()">
   <div class="modal-body" (click)="onCancelClick($event)">
+    <div class="close-icon">
+      <ng-container *ngIf="showCloseIcon">
+        <fa-icon class="modal-close-i" [icon]="['fas', 'times-circle']"></fa-icon>
+      </ng-container>
+    </div>
+
     <ng-container *ngIf="body else projectContent">
       <ng-container *ngTemplateOutlet="body"></ng-container>
     </ng-container>
 
     <ng-template #projectContent>
       <ng-content></ng-content>
+    </ng-template>
+
+    <ng-template #projectCloseIcon>
+      <ng-content select=".modal-close-i"></ng-content>
     </ng-template>
   </div>
 </div>
