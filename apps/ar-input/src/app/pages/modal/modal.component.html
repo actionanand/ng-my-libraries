@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Modal Examples</h1>
 
-    <ng-template #authModalBody let-loginTabActive="loginTabActive" let-title="title">
+    <ng-template #authModalBody let-loginTabActive="loginTabActive" let-title="myTitle">
       {{ title }}
       <ng-ar-tab-panel>
         <ng-ar-tab title="Login" [selected]="loginTabActive">
@@ -49,7 +49,7 @@
 
     <ng-ar-modal [hideOnEsc]="true" [body]="authModalBody" [hideOnClickOutside]="true" [showCloseIcon]="true"
       *ngArModalOpenOnClick="[loginButton, signUpButton]" closeIconSymbol="square" #ngArModal
-      [context]="{loginTabActive: loginActive, title: 'Login and Sign Up Modal'}">
+      [context]="{loginTabActive: loginActive, myTitle: 'Login and Sign Up Modal'}">
       <div class="modal-close-i" (click)="ngArModal.onCloseModal()"> X </div>
     </ng-ar-modal>
     
