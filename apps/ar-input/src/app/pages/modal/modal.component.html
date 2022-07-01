@@ -47,8 +47,8 @@
     </ng-template> -->
 
     <ng-ar-modal [hideOnEsc]="true" [body]="authModalBody" [hideOnClickOutside]="true" [showCloseIcon]="true"
-      *ngArModalOpenOnClick="[loginButton, signUpButton]">
-      <!-- <fa-icon class="modal-close-i" [icon]="['fas', 'times-square']"></fa-icon> -->
+      *ngArModalOpenOnClick="[loginButton, signUpButton]" closeIconSymbol="square" #ngArModal>
+      <div class="modal-close-i" (click)="ngArModal.onCloseModal()"> X </div>
     </ng-ar-modal>
     
 

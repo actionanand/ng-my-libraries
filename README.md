@@ -150,6 +150,7 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 - [How To Use Font Awesome icons in Angular Applications](https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/)
 - [TypeScript: Any | Unknown | Never](https://dev.to/ponikar/typescript-any-unknown-never-1idc)
 - [When to use `never` and `unknown` in TypeScript](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/)
+- [Get an Enum Key by Value in TypeScript](https://bobbyhadz.com/blog/typescript-get-enum-key-by-value)
 
 ## Further help
 
