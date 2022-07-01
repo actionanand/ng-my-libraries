@@ -173,7 +173,7 @@ We can see how user can provide their own html and style as below:
 </div>
 ```
 
-Prop `headerTemplate` used to feed teamplate and `tabSelected` api is used to know the currently selected tab. You can define your template with `ng-template` angulat html tag.
+Prop `headerTemplate` used to feed template and `tabSelected` public api object is used to know the currently selected tab. You can define your template with `ng-template` angulat html tag.
 
 you can find the sample style for the new template as below:
 
