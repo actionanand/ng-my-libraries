@@ -46,7 +46,8 @@
       </ng-ar-modal>
     </ng-template> -->
 
-    <ng-ar-modal [body]="authModalBody" *ngArModalOpenOnClick="[loginButton, signUpButton]">
+    <ng-ar-modal [hideOnEsc]="true" [body]="authModalBody" [hideOnClickOutside]="true"
+      *ngArModalOpenOnClick="[loginButton, signUpButton]">
     </ng-ar-modal>
     
 

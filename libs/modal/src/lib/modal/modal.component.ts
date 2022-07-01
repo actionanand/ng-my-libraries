@@ -1,7 +1,8 @@
 /* eslint-disable @angular-eslint/component-selector */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
-import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, HostListener, Input, OnInit, TemplateRef } from '@angular/core';
+import { EventManager } from '@angular/platform-browser';
 
 import { NgArModalService } from '../services/modal.service';
 
@@ -13,13 +14,20 @@ import { NgArModalService } from '../services/modal.service';
 export class ModalComponent implements OnInit {
 
   @Input() body!: TemplateRef<unknown>;
+  @Input() hideOnEsc: boolean = true;
+  @Input() hideOnClickOutside: boolean = true;
 
-  constructor(private modalServ: NgArModalService) {}
+  constructor(private modalServ: NgArModalService, private eventManager: EventManager) {}
+
+  @HostListener('window:keyup.esc', ['$event'])
+  closeModalOnPressingEsc(event: KeyboardEvent) {
+    this.hideOnEsc && this.modalServ.close();
+  }
 
   ngOnInit(): void {}
 
-  onCloseModal() {
-    this.modalServ.close();
+  onClickOutsideModal() {
+    this.hideOnClickOutside && this.modalServ.close();
   }
 
   onCancelClick(event: MouseEvent) {
