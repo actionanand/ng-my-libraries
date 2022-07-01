@@ -2,9 +2,10 @@
   <div class="container">
     <h1>Modal Examples</h1>
 
-    <ng-template #authModalBody>
+    <ng-template #authModalBody let-loginTabActive="loginTabActive" let-title="title">
+      {{ title }}
       <ng-ar-tab-panel>
-        <ng-ar-tab title="Login">
+        <ng-ar-tab title="Login" [selected]="loginTabActive">
           <form>
             <div class="form-field">
               <ng-ar-fa-input [icon]="iconEmail" [iconType]="typeReg">
@@ -19,7 +20,7 @@
           </form>
         </ng-ar-tab>
   
-        <ng-ar-tab title="Sign Up">
+        <ng-ar-tab title="Sign Up" [selected]="!loginTabActive">
           <form>
             <div class="form-field">
               <ng-ar-fa-input [icon]="iconEmail" [iconType]="typeReg">
@@ -47,14 +48,15 @@
     </ng-template> -->
 
     <ng-ar-modal [hideOnEsc]="true" [body]="authModalBody" [hideOnClickOutside]="true" [showCloseIcon]="true"
-      *ngArModalOpenOnClick="[loginButton, signUpButton]" closeIconSymbol="square" #ngArModal>
+      *ngArModalOpenOnClick="[loginButton, signUpButton]" closeIconSymbol="square" #ngArModal
+      [context]="{loginTabActive: loginActive, title: 'Login and Sign Up Modal'}">
       <div class="modal-close-i" (click)="ngArModal.onCloseModal()"> X </div>
     </ng-ar-modal>
     
 
     <div class="modal-buttons">
-      <button #loginButton>Login</button>
-      <button #signUpButton>Sign Up</button>
+      <button #loginButton (click)="setLoginActive(true)">Login</button>
+      <button #signUpButton (click)="setLoginActive(false)">Sign Up</button>
     </div>
   </div>
 </body>

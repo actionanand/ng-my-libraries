@@ -20,6 +20,7 @@ enum FA_CLOSE_ICONS {
 export class ModalComponent implements OnInit {
 
   @Input() body!: TemplateRef<unknown>;
+  @Input() context: any;
   @Input() hideOnEsc: boolean = true;
   @Input() hideOnClickOutside: boolean = true;
   @Input() showCloseIcon: boolean = true;
