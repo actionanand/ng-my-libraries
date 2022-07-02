@@ -1,9 +1,9 @@
 /* eslint-disable @angular-eslint/directive-selector */
-import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 import { includes } from 'lodash';
 
-import { SPECIAL_CHARACTERS } from '../shared/mask.utils';
+import { overWriteCharAtPosition, SPECIAL_CHARACTERS, TAB } from '../shared/mask.utils';
 
 
 @Directive({
@@ -17,6 +17,16 @@ export class MaskDirective implements OnInit {
 
   constructor(el: ElementRef) {
     this.input = el.nativeElement;
+  }
+
+  @HostListener('keydown', ['$event', '$event.keyCode'])
+  onKeyDown($event: KeyboardEvent, keyCode: number) {
+    keyCode !== TAB && $event.preventDefault();
+
+    const key = String.fromCharCode(keyCode),
+      cursorPos = (this.input.selectionStart) as number;
+
+    overWriteCharAtPosition(this.input, cursorPos, key);
   }
 
   buildPlaceHolder(): string {
