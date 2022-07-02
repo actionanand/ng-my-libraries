@@ -1,6 +1,10 @@
 /* eslint-disable @angular-eslint/directive-selector */
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
+
+import { includes } from 'lodash';
+
+import { SPECIAL_CHARACTERS } from '../shared/mask.utils';
+
 
 @Directive({
   selector: '[ng-ar-mask]'
@@ -12,15 +16,15 @@ export class MaskDirective implements OnInit {
   input!: HTMLInputElement;
 
   constructor(el: ElementRef) {
-    console.log('mask ', this.mask);
     this.input = el.nativeElement;
-
-    console.log('input ', this.input);
   }
 
   buildPlaceHolder(): string {
-    const value = '';
-    return value;
+    const chars = this.mask.split('');
+
+    return chars.reduce((result, char) => {
+      return result += includes(SPECIAL_CHARACTERS, char) ? char : '_';
+    }, '');
   }
 
   ngOnInit(): void {
