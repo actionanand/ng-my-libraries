@@ -15,6 +15,7 @@ export class MaskDirective implements OnInit {
   @Input('ng-ar-mask') mask = '';
 
   input!: HTMLInputElement;
+  fullFieldSelected = false;
 
   constructor(el: ElementRef) {
     this.input = el.nativeElement;
@@ -65,10 +66,21 @@ export class MaskDirective implements OnInit {
 
   @HostListener('keydown', ['$event', '$event.keyCode'])
   onKeyDown($event: KeyboardEvent, keyCode: number) {
+
+    if ($event.metaKey || $event.ctrlKey) {
+      return;
+    }
+
     keyCode !== TAB && $event.preventDefault();
 
     const key = String.fromCharCode(keyCode),
       cursorPos = (this.input.selectionStart) as number;
+
+    if(this.fullFieldSelected) {
+      this.input.value = this.buildPlaceHolder();
+      const firstPlaceholderPos = findIndex(this.input.value, char => char === '_');
+      this.input.setSelectionRange(firstPlaceholderPos, firstPlaceholderPos);
+    }
 
     switch(keyCode) {
       case LEFT_ARROW:
@@ -95,6 +107,12 @@ export class MaskDirective implements OnInit {
       overWriteCharAtPosition(this.input, cursorPos, key);
       this.handleRightArrow(cursorPos);
     }
+  }
+
+  @HostListener('select', ['$event'])
+  onSelect($event: UIEvent) {
+    this.fullFieldSelected = this.input.selectionStart === 0 &&
+      this.input.selectionEnd === this.input.value.length;
   }
 
 }
