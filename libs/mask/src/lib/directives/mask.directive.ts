@@ -2,6 +2,7 @@
 import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 
 import { includes, findLastIndex, findIndex } from 'lodash';
+import { maskDigitValidators } from '../shared/digit_validators';
 
 import { LEFT_ARROW, overWriteCharAtPosition, RIGHT_ARROW, SPECIAL_CHARACTERS, TAB } from '../shared/mask.utils';
 
@@ -61,10 +62,13 @@ export class MaskDirective implements OnInit {
         return;
     }
 
-    overWriteCharAtPosition(this.input, cursorPos, key);
-    this.handleRightArrow(cursorPos);
+    const maskDigit = this.mask.charAt(cursorPos),
+      digitValidator = maskDigitValidators[maskDigit]; // it will return an function (say numericValidator)
+
+    if(digitValidator(key)) {
+      overWriteCharAtPosition(this.input, cursorPos, key);
+      this.handleRightArrow(cursorPos);
+    }
   }
-
-
 
 }
