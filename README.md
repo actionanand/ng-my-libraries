@@ -151,6 +151,7 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 - [TypeScript: Any | Unknown | Never](https://dev.to/ponikar/typescript-any-unknown-never-1idc)
 - [When to use `never` and `unknown` in TypeScript](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/)
 - [Get an Enum Key by Value in TypeScript](https://bobbyhadz.com/blog/typescript-get-enum-key-by-value)
+- [Display IE ::ms-clear pseudo element in small input elements?](https://stackoverflow.com/questions/34745452/display-ie-ms-clear-pseudo-element-in-small-input-elements)
 
 ## Further help
 

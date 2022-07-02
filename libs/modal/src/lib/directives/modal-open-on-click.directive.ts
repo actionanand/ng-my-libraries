@@ -30,6 +30,12 @@ export class ModalOpenOnClickDirective implements OnInit, OnDestroy {
       });
     }
 
+  clickHandler = (() => {
+    this.viewContainer.clear();
+    this.viewContainer.createEmbeddedView(this.templateRef);
+  }).bind(this);
+  
+
   ngOnInit(): void {
     this.modalServ.close$.subscribe(() => this.viewContainer.clear());
   }
@@ -37,10 +43,5 @@ export class ModalOpenOnClickDirective implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.elements.forEach(el => el.removeEventListener('click', this.clickHandler));
   }
-
-  clickHandler = (() => {
-    this.viewContainer.clear();
-    this.viewContainer.createEmbeddedView(this.templateRef);
-  }).bind(this);
 
 }
