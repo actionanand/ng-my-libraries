@@ -7,5 +7,6 @@ import { MaskDirective } from './directives/mask.directive';
   declarations: [
     MaskDirective
   ],
+  exports: [MaskDirective]
 })
 export class MaskModule {}
