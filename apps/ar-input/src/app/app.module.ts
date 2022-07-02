@@ -6,6 +6,7 @@ import { faTimes, faTimesCircle, faTimesSquare } from '@fortawesome/free-solid-s
 import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
 import { ModalModule } from '@ng-ar/modal';
+import { MaskModule } from '@ng-ar/mask';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { TabComponent } from './pages/tab/tab.component';
 import { InputComponent } from './pages/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ModalComponent } from './pages/modal/modal.component';
+import { MaskComponent } from './pages/mask/mask.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { ModalComponent } from './pages/modal/modal.component';
     InputComponent,
     HeaderComponent,
     ModalComponent,
+    MaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { ModalComponent } from './pages/modal/modal.component';
     FontAwesomeModule,
     FaInputModule,
     TabModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    MaskModule
   ],
   providers: [],
   bootstrap: [AppComponent],
