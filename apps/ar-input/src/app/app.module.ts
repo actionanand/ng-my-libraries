@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faTimes, faTimesCircle, faTimesSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
+import {
+  faTimes,
+  faTimesCircle,
+  faTimesSquare,
+} from '@fortawesome/free-solid-svg-icons';
 import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
 import { ModalModule } from '@ng-ar/modal';
@@ -15,6 +22,7 @@ import { InputComponent } from './pages/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ModalComponent } from './pages/modal/modal.component';
 import { MaskComponent } from './pages/mask/mask.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +32,7 @@ import { MaskComponent } from './pages/mask/mask.component';
     HeaderComponent,
     ModalComponent,
     MaskComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,7 @@ import { MaskComponent } from './pages/mask/mask.component';
     FaInputModule,
     TabModule,
     ModalModule.forRoot(),
-    MaskModule
+    MaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

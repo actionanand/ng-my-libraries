@@ -15,7 +15,20 @@ nav {
 
   & a {
     text-decoration: none;
-    color: #0d47a1
+    color: #0d47a1;
+
+    &:hover {
+      color: aquamarine;
+    }
+  }
+
+  & h2 {
+    cursor: pointer;
+    color: darkcyan;
+
+    &:hover {
+      color: aquamarine;
+    }
   }
 }
 

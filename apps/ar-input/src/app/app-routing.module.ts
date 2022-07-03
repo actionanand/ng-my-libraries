@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
 
 import { InputComponent } from './pages/input/input.component';
 import { MaskComponent } from './pages/mask/mask.component';
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
+    component: HomeComponent
+  },
+  {
+    path: 'input',
     component: InputComponent
   },
   {
