@@ -10,7 +10,7 @@ The default theme of the input is designed to look just like a plain HTML input,
 
 Here is how the inputs with the icons look like on the screen:
 
-![Demo of ng-ar-prime-input](https://raw.githubusercontent.com/actionanand/ng-my-libraries/main/libs/fa-input/src/assets/images/fa-input.PNG)
+![Demo of ng-ar-prime-input](https://raw.githubusercontent.com/actionanand/ng-my-libraries/main/libs/prime-input/src/assets/images/ngar-prime-in-green.PNG)
 
 # Installation
 

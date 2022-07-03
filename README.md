@@ -6,7 +6,7 @@ This project was generated using [Nx](https://nx.dev) - [Angular 14.0.2](https:/
 
 ## Libraries in this repo
 
-Code for the libraries of [@ng-ar/fa-input](https://www.npmjs.com/package/@ng-ar/fa-input), [@ng-ar/tab](https://www.npmjs.com/package/@ng-ar/tab), [@ng-ar/modal](https://www.npmjs.com/package/@ng-ar/modal) and [@ng-ar/mask](https://www.npmjs.com/package/@ng-ar/mask) are included in this repo.
+Code for the libraries of [@ng-ar/fa-input](https://www.npmjs.com/package/@ng-ar/fa-input), [@ng-ar/prime-input](https://www.npmjs.com/package/@ng-ar/prime-input), [@ng-ar/tab](https://www.npmjs.com/package/@ng-ar/tab), [@ng-ar/modal](https://www.npmjs.com/package/@ng-ar/modal) and [@ng-ar/mask](https://www.npmjs.com/package/@ng-ar/mask) are included in this repo.
 
 ## How I created this repo
 
@@ -183,6 +183,7 @@ git stash -u && git stash drop
 - [Creating libraries - Official](https://angular.io/guide/creating-libraries)
 - [The Angular Library Series - Creating a Library with Angular CLI](https://medium.com/angular-in-depth/creating-a-library-in-angular-6-87799552e7e5)
 - [Create your Angular Library and linking](https://medium.com/@prajramesh93/create-your-angular-library-f2cf273fd8a5)
+- [Define a Type for Object with Dynamic keys in TypeScript](https://bobbyhadz.com/blog/typescript-object-with-dynamic-keys)
 
 ## Further help
 

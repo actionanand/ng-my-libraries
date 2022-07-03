@@ -1,6 +1,7 @@
 {
   "name": "@ng-ar/tab",
-  "version": "14.0.4",
+  "version": "14.0.5",
+  "license": "MIT",
   "keywords": [
     "Angular", "Angular14", "angular_tab"
   ],
