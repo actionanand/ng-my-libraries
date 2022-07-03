@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faTimes, faTimesCircle, faTimesSquare } from '@fortawesome/free-solid-svg-icons';
+import { ButtonModule } from 'primeng/button';
 import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
 import { ModalModule } from '@ng-ar/modal';
@@ -35,6 +36,7 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     FontAwesomeModule,
     FaInputModule,
+    ButtonModule,
     TabModule,
     ModalModule.forRoot(),
     MaskModule,
