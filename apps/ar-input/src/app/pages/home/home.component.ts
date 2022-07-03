@@ -5,10 +5,13 @@ import { Component, OnInit } from '@angular/core';
 
 import { ICON_TYPE, ICON_NAME } from '@ng-ar/fa-input';
 
+import { fadeInOut } from '../../animations/home.animation';
+
 @Component({
   selector: 'ng-my-libraries-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  animations: [fadeInOut]
 })
 export class HomeComponent implements OnInit {
   constructor() {}
