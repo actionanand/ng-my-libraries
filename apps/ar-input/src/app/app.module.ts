@@ -4,10 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faTimes, faTimesCircle, faTimesSquare } from '@fortawesome/free-solid-svg-icons';
+import { ButtonModule } from 'primeng/button';
 import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
 import { ModalModule } from '@ng-ar/modal';
 import { MaskModule } from '@ng-ar/mask';
+import { PrimeInputModule } from '@ng-ar/prime-input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,9 +36,11 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     FontAwesomeModule,
     FaInputModule,
+    ButtonModule,
     TabModule,
     ModalModule.forRoot(),
     MaskModule,
+    PrimeInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

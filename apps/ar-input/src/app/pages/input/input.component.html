@@ -1,20 +1,68 @@
 <div class="wrapper">
-  <label>Normal Input:</label>
-  <input type="text" placeholder="not from lib and outside">
+  <div>
+    <label>Normal Input:</label>
+    <input type="text" placeholder="Not from lib and outside">
+  </div>
   
-  <label>Normal from lib:</label>
-  <ng-ar-fa-input>
-    <input type="text" placeholder="type your text">
-  </ng-ar-fa-input>
+  <div>
+    <label>Normal from fa lib:</label>
+    <ng-ar-fa-input>
+      <input type="text" placeholder="type your text">
+    </ng-ar-fa-input>
+  </div>
+
+  <div>
+    <label>Normal from prime lib:</label>
+    <ng-ar-prime-input>
+      <input type="text" placeholder="type your text">
+    </ng-ar-prime-input>
+  </div>
 </div>
 
-<div class="container">
-  <h1>Font Awesome</h1>
+<ng-template #showPrimeInput>
+  <h1>Prime NG Input Icons</h1>
   <div class="form">
-
     <div class="form-row">
       <label>Normal Input:</label>
       <input type="text" placeholder="not from lib">
+    </div>
+
+    <div class="form-row">
+      <label>Text Field:</label>
+      <ng-ar-prime-input [icon]="'envelope'">
+        <input type="email" placeholder="please enter your e-mail">
+      </ng-ar-prime-input>
+    </div>
+
+    <div class="form-row">
+      <label>Text Field:</label>
+      <ng-ar-prime-input [icon]="'book'">
+        <input type="text" placeholder="please enter some text">
+      </ng-ar-prime-input>
+    </div>
+
+    <div class="form-row prime-input-green-theme">
+      <label>WhatsApp Field:</label>
+      <ng-ar-prime-input [icon]="'whatsapp'">
+        <input type="number" placeholder="your WhatsApp number">
+      </ng-ar-prime-input>
+    </div>
+
+    <div class="form-row">
+      <label>Default Input field:</label>
+      <ng-ar-prime-input>
+        <input type="text" placeholder="default field">
+      </ng-ar-prime-input>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #defaultProjection>
+  <h1>Font Awesome</h1>
+  <div class="form">
+    <div class="form-row">
+      <label>Normal Input:</label>
+      <input type="text" placeholder="Not from lib">
     </div>
 
     <div class="form-row">
@@ -44,4 +92,14 @@
         <input type="url" placeholder="type your fb link">
       </ng-ar-fa-input>
     </div>
+	</div>
+</ng-template>
+
+<div class="container">
+  <button pButton type="button" class="p-button-outlined p-button-success p-button-sm" (click)="onFlipInputs()"> 
+    Show {{ showFaInput ? 'Prime ' : 'Fa ' }} Inputs
+  </button>
+  <ng-container *ngIf="showFaInput else showPrimeInput">
+    <ng-container [ngTemplateOutlet]="defaultProjection"></ng-container>
+  </ng-container>
 </div>

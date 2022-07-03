@@ -17,9 +17,15 @@ export class InputComponent implements OnInit {
   typeReg = ICON_TYPE.REGULAR;
   typeBrand = ICON_TYPE.BRAND;
 
+  showFaInput = true;
+
   iconEmail = ICON_NAME.REG_SOLID.ENVELOPE;
   iconAddress = ICON_NAME.REG_SOLID.ADDRESS_CARD;
   iconFb = ICON_NAME.BRAND.FACEBOOK;
 
   ngOnInit(): void {}
+
+  onFlipInputs() {
+    this.showFaInput = !this.showFaInput;
+  }
 }
