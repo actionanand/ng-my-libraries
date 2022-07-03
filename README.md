@@ -4,7 +4,9 @@ This project was generated using [Nx](https://nx.dev) - [Angular 14.0.2](https:/
 
 <!-- <p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p> -->
 
-🔎 **Smart, Fast and Extensible Build System**
+## Libraries in this repo
+
+Code for the libraries of [@ng-ar/fa-input](https://www.npmjs.com/package/@ng-ar/fa-input), [@ng-ar/tab](https://www.npmjs.com/package/@ng-ar/tab), [@ng-ar/modal](https://www.npmjs.com/package/@ng-ar/modal) and [@ng-ar/mask](https://www.npmjs.com/package/@ng-ar/mask) are included in this repo.
 
 ## How I created this repo
 
