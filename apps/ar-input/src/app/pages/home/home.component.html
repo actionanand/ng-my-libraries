@@ -1,1 +1,58 @@
-<p>home works!</p>
+<div class="container">
+  <h1>
+    Animations
+  </h1>
+
+  <ng-template #modalBody>
+    <!-- <ng-template #modalButtons>
+      <div class="modal-buttons">
+        <button (click)="tabPanel.onSelectTab(stripeTab)">Stripe</button>
+        <button (click)="tabPanel.onSelectTab(paypalTab)">Paypal</button>
+      </div>
+    </ng-template> -->
+
+    <ng-ar-tab-panel #tabPanel>
+      <ng-ar-tab title="Stripe" #stripeTab>
+        <div class="payment-form">
+          <label>Email:</label>
+          <ng-ar-fa-input class="form-input" [icon]="iconEmail" [iconType]="typeReg">
+            <input type="email" placeholder="Your e-mail">
+          </ng-ar-fa-input>
+
+          <label>Name:</label>
+          <input class="form-input" placeholder="Name">
+
+          <label>Card Number:</label>
+          <ng-ar-fa-input [icon]="iconCc" [iconType]="typeSolid" class="form-input">
+            <input placeholder="Card Number" ng-ar-mask="9999 9999 9999 9999">
+          </ng-ar-fa-input>
+
+          <label>Card Date:</label>
+          <input placeholder="Date" ng-ar-mask="12/9999" class="form-input">
+
+          <label>CVC:</label>
+          <input placeholder="CVC" ng-ar-mask="999" class="form-input">
+
+          <label>Coupon Code:</label>
+          <input placeholder="Coupon Code (optional)" class="form-input">
+
+          <button class="modal-button">Trigger Stripe Payment</button>
+        </div>
+      </ng-ar-tab>
+
+      <ng-ar-tab title="Paypal" #paypalTab>
+        <div class="payment-form">
+          <label>Coupon Code:</label>
+          <input placeholder="Coupon Code (optional)" class="form-input">
+
+          <button class="modal-button">Trigger Paypal Payment</button>
+        </div>
+      </ng-ar-tab>
+    </ng-ar-tab-panel>
+  </ng-template>
+
+  <ng-ar-modal *ngArModalOpenOnClick="paymentModal" [body]="modalBody">
+  </ng-ar-modal>
+
+  <button #paymentModal>Open Payment Modal</button>
+</div>
