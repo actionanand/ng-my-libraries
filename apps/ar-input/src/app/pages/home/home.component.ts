@@ -25,4 +25,12 @@ export class HomeComponent implements OnInit {
   iconCc = ICON_NAME.REG_SOLID.CREDIT_CARD;
 
   ngOnInit(): void {}
+
+  onAnimationStart() {
+    console.info('FadeInOut Animation started');
+  }
+
+  onAnimationEnd() {
+    console.info('FadeInOut Animation ended');
+  }
 }

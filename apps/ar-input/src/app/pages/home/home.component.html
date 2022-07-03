@@ -51,7 +51,8 @@
     </ng-ar-tab-panel>
   </ng-template>
 
-  <ng-ar-modal [@fadeInOut] *ngArModalOpenOnClick="paymentModal" [body]="modalBody">
+  <ng-ar-modal [@fadeInOut] (@fadeInOut.start)="onAnimationStart()" (@fadeInOut.done)="onAnimationEnd()"
+    *ngArModalOpenOnClick="paymentModal" [body]="modalBody">
   </ng-ar-modal>
 
   <button class="btn-test" #paymentModal>Open Payment Modal</button>
