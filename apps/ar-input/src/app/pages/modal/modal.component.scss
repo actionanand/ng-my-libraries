@@ -26,3 +26,21 @@
     
   }
 }
+
+.btn-test {
+  display: inline-block;
+  color: white;
+  background-color:darkcyan;
+  padding: 2px 20px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 5px;
+  border: 1px solid rgb(5, 94, 94);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: white;
+    color: rgb(5, 94, 94);
+    border: 1px solid rgb(5, 94, 94);
+  }
+}
