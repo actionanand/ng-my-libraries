@@ -144,6 +144,26 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
 
+## Deploy to GitHub Pages
+
+1. To begin, add the `angular-cli-ghpages` builder.
+
+```bash
+ng add angular-cli-ghpages
+```
+
+2. If you’re deploying the project to a Github project page you’ll need to set the `baseHref` property as the repository name. The `baseHref` will be used for all relative URLs on your site. You could specify the `baseHref` as part of the project architect deploy options in the `angular.json` file. Or just pass it as the `--base-href` flag to the `ng deploy` command. If you’re deploying the project to a Github user page, you do not need to set this option.
+
+```bash
+ng deploy --base-href=/<repository-name>/
+```
+
+GitHub will automatically enable Pages when you push a gh-pages branch. There is no need to enable Pages from the repository settings.
+
+```bash
+ng deploy --base-href=/ng-my-libraries/
+```
+
 ## Resources
 
 - [What’s New in Angular 14?](https://www.bacancytechnology.com/blog/whats-new-in-angular-14)
@@ -154,6 +174,9 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 - [When to use `never` and `unknown` in TypeScript](https://blog.logrocket.com/when-to-use-never-and-unknown-in-typescript-5e4d6c5799ad/)
 - [Get an Enum Key by Value in TypeScript](https://bobbyhadz.com/blog/typescript-get-enum-key-by-value)
 - [Display IE ::ms-clear pseudo element in small input elements?](https://stackoverflow.com/questions/34745452/display-ie-ms-clear-pseudo-element-in-small-input-elements)
+- [Creating libraries - Official](https://angular.io/guide/creating-libraries)
+- [The Angular Library Series - Creating a Library with Angular CLI](https://medium.com/angular-in-depth/creating-a-library-in-angular-6-87799552e7e5)
+- [Create your Angular Library and linking](https://medium.com/@prajramesh93/create-your-angular-library-f2cf273fd8a5)
 
 ## Further help
 
