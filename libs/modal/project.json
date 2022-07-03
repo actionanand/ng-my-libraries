@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": ["dist/libs/modal"],
+      "outputs": [
+        "dist/libs/modal"
+      ],
       "options": {
         "project": "libs/modal/ng-package.json"
       },
@@ -21,7 +23,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/modal"],
+      "outputs": [
+        "coverage/libs/modal"
+      ],
       "options": {
         "jestConfig": "libs/modal/jest.config.ts",
         "passWithNoTests": true
@@ -30,7 +34,10 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/modal/**/*.ts", "libs/modal/**/*.html"]
+        "lintFilePatterns": [
+          "libs/modal/**/*.ts",
+          "libs/modal/**/*.html"
+        ]
       }
     }
   },
