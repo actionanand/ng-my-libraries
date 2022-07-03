@@ -7,6 +7,7 @@
     "fa-input": "libs/fa-input",
     "mask": "libs/mask",
     "modal": "libs/modal",
+    "prime-input": "libs/prime-input",
     "tab": "libs/tab"
   }
 }

@@ -8,6 +8,7 @@ import { FaInputModule } from '@ng-ar/fa-input';
 import { TabModule } from '@ng-ar/tab';
 import { ModalModule } from '@ng-ar/modal';
 import { MaskModule } from '@ng-ar/mask';
+import { PrimeInputModule } from '@ng-ar/prime-input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { HomeComponent } from './pages/home/home.component';
     TabModule,
     ModalModule.forRoot(),
     MaskModule,
+    PrimeInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
