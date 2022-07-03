@@ -13,6 +13,8 @@ import { BACKSPACE, DELETE, LEFT_ARROW, overWriteCharAtPosition, RIGHT_ARROW, SP
 export class MaskDirective implements OnInit {
 
   @Input('ng-ar-mask') mask = '';
+  @Input() rightClick = false;
+  @Input() metaKeys = false;
 
   input!: HTMLInputElement;
   fullFieldSelected = false;
@@ -67,7 +69,7 @@ export class MaskDirective implements OnInit {
   @HostListener('keydown', ['$event', '$event.keyCode'])
   onKeyDown($event: KeyboardEvent, keyCode: number) {
 
-    if ($event.metaKey || $event.ctrlKey) {
+    if (this.metaKeys && ($event.metaKey || $event.ctrlKey)) {
       return;
     }
 
@@ -76,7 +78,8 @@ export class MaskDirective implements OnInit {
     const key = String.fromCharCode(keyCode),
       cursorPos = (this.input.selectionStart) as number;
 
-    if(this.fullFieldSelected) {
+    // if meta keys allowed, when selected, we can clear the input by single key press
+    if(this.fullFieldSelected && this.metaKeys) {
       this.input.value = this.buildPlaceHolder();
       const firstPlaceholderPos = findIndex(this.input.value, char => char === '_');
       this.input.setSelectionRange(firstPlaceholderPos, firstPlaceholderPos);
@@ -113,6 +116,12 @@ export class MaskDirective implements OnInit {
   onSelect($event: UIEvent) {
     this.fullFieldSelected = this.input.selectionStart === 0 &&
       this.input.selectionEnd === this.input.value.length;
+  }
+
+  // preventing right click
+  @HostListener('contextmenu', ['$event'])
+  onPreventRightClick($event: UIEvent) {
+    !this.rightClick && $event.preventDefault();
   }
 
 }
