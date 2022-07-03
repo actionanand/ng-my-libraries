@@ -164,6 +164,12 @@ GitHub will automatically enable Pages when you push a gh-pages branch. There is
 ng deploy --base-href=/ng-my-libraries/
 ```
 
+3. Remove `angular-cli-ghpages` after deployemnt as it's not supporting `angular 14`.
+
+```bash
+git stash -u && git stash drop
+```
+
 ## Resources
 
 - [What’s New in Angular 14?](https://www.bacancytechnology.com/blog/whats-new-in-angular-14)
