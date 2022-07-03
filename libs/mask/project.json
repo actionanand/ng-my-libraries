@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": [
-        "dist/libs/mask"
-      ],
+      "outputs": ["dist/libs/mask"],
       "options": {
         "project": "libs/mask/ng-package.json"
       },
@@ -23,9 +21,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/libs/mask"
-      ],
+      "outputs": ["coverage/libs/mask"],
       "options": {
         "jestConfig": "libs/mask/jest.config.ts",
         "passWithNoTests": true
@@ -34,10 +30,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/mask/**/*.ts",
-          "libs/mask/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/mask/**/*.ts", "libs/mask/**/*.html"]
       }
     }
   },

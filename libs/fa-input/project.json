@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@nrwl/angular:package",
-      "outputs": [
-        "dist/libs/fa-input"
-      ],
+      "outputs": ["dist/libs/fa-input"],
       "options": {
         "project": "libs/fa-input/ng-package.json"
       },
@@ -23,9 +21,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/libs/fa-input"
-      ],
+      "outputs": ["coverage/libs/fa-input"],
       "options": {
         "jestConfig": "libs/fa-input/jest.config.ts",
         "passWithNoTests": true
@@ -34,10 +30,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/fa-input/**/*.ts",
-          "libs/fa-input/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/fa-input/**/*.ts", "libs/fa-input/**/*.html"]
       }
     }
   },

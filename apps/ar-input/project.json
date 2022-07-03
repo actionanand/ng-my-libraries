@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/ar-input",
         "index": "apps/ar-input/src/index.html",
@@ -15,13 +13,8 @@
         "polyfills": "apps/ar-input/src/polyfills.ts",
         "tsConfig": "apps/ar-input/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/ar-input/src/favicon.ico",
-          "apps/ar-input/src/assets"
-        ],
-        "styles": [
-          "apps/ar-input/src/styles.scss"
-        ],
+        "assets": ["apps/ar-input/src/favicon.ico", "apps/ar-input/src/assets"],
+        "styles": ["apps/ar-input/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -78,24 +71,16 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/ar-input/**/*.ts",
-          "apps/ar-input/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/ar-input/**/*.ts", "apps/ar-input/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/ar-input"
-      ],
+      "outputs": ["coverage/apps/ar-input"],
       "options": {
         "jestConfig": "apps/ar-input/jest.config.ts",
         "passWithNoTests": true
       }
-    },
-    "deploy": {
-      "executor": "angular-cli-ghpages:deploy"
     }
   },
   "tags": []
