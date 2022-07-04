@@ -11,7 +11,7 @@
   & .form-input {
     display: block;
     border-radius: 4px;
-    height: 20px;
+    // height: 20px;
     line-height: 20px;
     font-size: 14px;
     font-family: "Courier", serif;
@@ -63,7 +63,7 @@ input::-ms-clear {
   display: inline-block;
   color: white;
   background-color:darkcyan;
-  padding: 2px 20px;
+  padding: .6rem;
   cursor: pointer;
   margin-left: 5px;
   margin-top: 5px;
