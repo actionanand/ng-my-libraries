@@ -1,14 +1,15 @@
 {
   "name": "@ng-ar/prime-input",
-  "version": "14.0.5",
+  "version": "14.0.6",
   "license": "MIT",
   "keywords": [
     "Angular", "Angular14", "angular_input"
   ],
   "author": "Anand Raja",
   "peerDependencies": {
-    "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0",
+    "@angular/common": ">=14.0.0",
+    "@angular/core": ">=14.0.0",
+    "rxjs": ">=6.6.3",
     "primeng": "^14.0.0-rc.1",
     "primeicons": "^5.0.0"
   },
